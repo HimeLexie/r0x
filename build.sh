@@ -23,6 +23,9 @@ print_help() {
     printf "Usage: build.sh [OPTION] [TARGETS]\nBuilds an r0x executable.\n\nOptions:\n  -c|--clean  clean build\n  -h|--help   display this help message\n\nValid targets:\n  windows\n  linux\nTargets should be space seperated if multiple are to be specified.\n\nExample:\nbuild.sh -c windows linux"
 }
 
+if [ -z $@ ]; then
+    print_help
+fi
 for arg in "$@"; do
     case $arg in
         -c|--clean)
@@ -46,6 +49,3 @@ for arg in "$@"; do
         ;;
     esac
 done
-if [ -z $@ ]; then
-    print_help
-fi
