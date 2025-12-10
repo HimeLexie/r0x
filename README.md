@@ -15,7 +15,7 @@ Simply install rustup toolchain via [the rustup toolchain manager/installer](htt
 ### Windows
 Same as Linux except the command is `./build.sh windows`. A good way to run bash scripts on Windows is git bash through [Git for Windows](https://git-scm.com/install/windows).
 ### Cross-compilation
-To cross-compile windows from a linux device you should install your package manager's package for `llvm`, `wine`, and `lld`. Then, run `rustup target add x86_64-pc-windows-msvc` to get the msvc toolchain. You should then install xwin via `cargo install xwin`, run from **this** directory `xwin --accept-license splate --output .xwin`, and rename `.cargo/config.toml.linux-to-windows-template` to `config.toml`. Lastly, run `./build.sh windows`.
+To cross-compile windows from a linux device you should install your package manager's package for `llvm`, `wine`, and `lld`. Then, run `rustup target add x86_64-pc-windows-msvc` to get the msvc toolchain. You should then install xwin via `cargo install xwin`, run from **this** directory `xwin --accept-license splat --output .xwin`, and rename `.cargo/config.toml.linux-to-windows-template` to `config.toml`. Lastly, run `./build.sh windows`.
 
 example:
 ![example](https://files.catbox.moe/0tv0e1.png)
